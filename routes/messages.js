@@ -61,7 +61,7 @@ router.post("/add", (req, res) => {
     content: content,
     subject: subject,
     owner: owner,
-    recipient: recipient
+    // recipient: recipient
   })
     .then(comment => {
       // res.json(message)

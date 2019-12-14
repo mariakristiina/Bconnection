@@ -36,23 +36,23 @@ class Mailbox extends Component {
   render() {
     const { sentMessages, receivedMessages } = this.state;
     console.log("tst", sentMessages, receivedMessages);
+  
 
     return (
 
       <div>
         {sentMessages.map(msg => {
-
+console.log(msg);
           return (
             <div >
               <Link
                 to={`/mailbox/detail/${msg._id}`}
-                key={msg._id}
-                className="list-group-item list-group-item-action mailBox"
-              >
-                <div>
-                  <p>Title: {msg.subject.title}</p>
-                  <p>From: {msg.owner.username}</p>
-                  <Moment>{msg.date}</Moment>
+                key={msg._id}>
+                <div className="mailBox conversation">
+                  <h3 className="messageTitle">{msg.subject.title}</h3>
+                  <div className="messageContainer">
+                  {/* <p className="messageText">conversation with {msg.owner.username}</p> */}
+                </div>
                 </div>
               </Link>
             </div>

@@ -31,7 +31,7 @@ class MailboxDetail extends Component {
         console.log(response.data);
         this.setState({
           message: response.data,
-          comment: response.data
+          comment: response.data,
         });
       })
       .catch(err => {
@@ -49,13 +49,13 @@ class MailboxDetail extends Component {
         id: id,
         content: this.state.content,
         subject: this.state.message.subject._id,
-        owner: this.state.message.owner._id,
-        recipient: this.state.message.recipient._id
+        owner: this.props.user._id,
+        // recipient: this.state.message.recipient._id
       })
       .then(message => {
         console.log(message);
         this.setState({
-          content: ""
+          content: "",
         });
         this.getMailboxDetail();
         //this.props.history.push(`/mailbox/${this.state.post.owner._id}`);
@@ -92,49 +92,53 @@ class MailboxDetail extends Component {
   }
 
   render() {
+
     if (this.state.message === null) {
       return <div></div>;
     }
 
-    let comments = this.state.message.comments.map(comment => {
+ let comments = this.state.message.comments.map(comment => {
       console.log(comment.subject)
       console.log(this.state.message)
+      if(this.props.user._id === comment.owner) {
       return (
-        <div className="comments">
-          <Moment className="date">{comment.created_at}</Moment>
-
-          <p>{comment.content}</p>
+        <div className="comments2">
+            <p className="message1">{comment.content}</p>
+        <Moment className="date">{comment.created_at}</Moment>
         </div>
-
-      )
+      )} else {
+        return (
+          <div className="comments">
+              <p className="message1">{comment.content}</p>
+          <Moment className="date">{comment.created_at}</Moment>
+          </div>
+        )
+      }
     });
 
     return (
-
-      <div>
-        <p className="profLabel">Your conversation with {this.state.message.owner.username}</p>
+<div>
+      <div className="containerForSentMessages">
         <div className="comments">
+        <p className="message1">{this.state.message.content}</p>
           <Moment className="date">{this.state.message.created_at}</Moment>
-          <p>{this.state.message.content}</p>
         </div>
 
         {comments}
-
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Label className="profLabel">Answer</Form.Label>
-            <Form.Control
+        </div>
+        <form className="sendMessage" onSubmit={this.handleSubmit}>
+            {/* <Form.Label className="profLabel">Answer</Form.Label> */}
+            <input
               className="formSubmit"
               as="textarea"
               rows="3"
               name="content"
               onChange={this.handleChange}
             />
-            <button className="button profButton">Send your answer</button>
-          </Form.Group>
-        </Form>
+            <button className="button messageButton">Send</button>
+        </form>
       </div>
-    );
+    ) 
   }
 }
 

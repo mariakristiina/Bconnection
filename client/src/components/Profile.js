@@ -37,15 +37,19 @@ const Profile = props => {
 </div>
 
       <h2>Hello {props.profile.username}</h2>
-      <div className="profLabel"> 
-        My Age</div>
+      <div className="profInfoContainer">
+      <div className="detailContainer">
+      <div className="profLabel2"> 
+        My Age:</div>
+       
         <div className="profText age">
         {""}
         {Math.floor(
           (new Date() - new Date(props.profile.age).getTime()) / 3.15576e10
         )} </div> 
-
-        <div className="profLabel">My Gender </div>
+        </div>
+        <div className="detailContainer">
+        <div className="profLabel2">My Gender:</div>
         {props.profile.gender === "female" ?
         <img className="genderPic" src="/female.png" alt=""/> 
         :
@@ -53,11 +57,16 @@ const Profile = props => {
         <img className="genderPic" src="/male.png" alt=""/>  :
         <img className="genderPic" src="/diverse.png" alt=""/>
         }
-      
-      <div className="profLabel">My Languages </div> 
+        </div>
+        <div className="detailContainer">
+      <div className="profLabel2">My Languages: </div> 
       <div className="profText">{props.profile.languages}</div>
-      <div className="profLabel">About Me </div>
+      </div>
+      <div className="detailContainer">
+      <div className="profLabel2">About Me: </div>
       <div className="profText aboutText">"{props.profile.about}"</div>
+      </div>
+      </div>
       </div>
      
 <div>
@@ -166,16 +175,20 @@ const Profile = props => {
       <img className="profilePic" src={props.profile.urlPath} alt="profile" />
       </div>
       
-            <h2>Hello {props.profile.username}</h2>
-            <div className="profLabel"> 
-              My Age</div>
+            <h2>Hallo {props.profile.username}</h2>
+            <div className="profInfoContainer">
+            <div className="detailContainer">
+            <div className="profLabel2"> 
+              mein alter:</div>
+             
               <div className="profText age">
               {""}
               {Math.floor(
                 (new Date() - new Date(props.profile.age).getTime()) / 3.15576e10
               )} </div> 
-      
-              <div className="profLabel">My Gender </div>
+              </div>
+              <div className="detailContainer">
+              <div className="profLabel2">Mein Geschkecht:</div>
               {props.profile.gender === "female" ?
               <img className="genderPic" src="/female.png" alt=""/> 
               :
@@ -183,15 +196,20 @@ const Profile = props => {
               <img className="genderPic" src="/male.png" alt=""/>  :
               <img className="genderPic" src="/diverse.png" alt=""/>
               }
-            
-            <div className="profLabel">My Languages </div> 
+              </div>
+              <div className="detailContainer">
+            <div className="profLabel2">Meine sprachen: </div> 
             <div className="profText">{props.profile.languages}</div>
-            <div className="profLabel">About Me </div>
+            </div>
+            <div className="detailContainer">
+            <div className="profLabel2">über mich: </div>
             <div className="profText aboutText">"{props.profile.about}"</div>
+            </div>
+            </div>
             </div>
            
       <div>
-            <button className="button profButton" onClick={props.toggleEditProfile}>Edit Profile Information</button>
+            <button className="button profButton" onClick={props.toggleEditProfile}>profilinformationen bearbeiten</button>
             </div>
             </div>
       
@@ -203,7 +221,7 @@ const Profile = props => {
                         encType="multipart/form-data"
                       >
                         <div className="profForm">
-                          <label htmlFor="profPic" className="profLabel">Upload Profile Picture</label>
+                          <label htmlFor="profPic" className="profLabel">profilbild aktualisieren</label>
                           <input className="imageInput"
                             type="file"
                             name="urlPath"
@@ -223,7 +241,7 @@ const Profile = props => {
                         </div>
       
                         <div className="profForm">
-                          <label htmlFor="age" className="profLabel">birthday </label>
+                          <label htmlFor="age" className="profLabel">geburtstag </label>
                           <input className="profFormInput"
                             type="date"
                             name="age"
@@ -234,7 +252,7 @@ const Profile = props => {
                         </div>
       
                         <div className="profForm">
-                          <label htmlFor="gender" className="profLabel">Gender </label>
+                          <label htmlFor="gender" className="profLabel">Geschkecht </label>
                           <select
                             onChange={props.handleChangeProfile}
                             name="gender"
@@ -248,7 +266,7 @@ const Profile = props => {
                         </div>
       
                         <div className="profForm">
-                          <label htmlFor="languages" className="profLabel">languages </label>
+                          <label htmlFor="languages" className="profLabel">sprachen </label>
                           <input className="profFormInput"
                             type="text"
                             name="languages"
@@ -259,7 +277,7 @@ const Profile = props => {
                         </div>
       
                         <div className="profForm">
-                          <label htmlFor="about" className="profLabel">about me </label>
+                          <label htmlFor="about" className="profLabel">über mich </label>
                           <input className="profFormInput"
                             type="text"
                             name="about"
@@ -276,7 +294,7 @@ const Profile = props => {
       
       
                       <button className="button profButton" onClick={deleteProfile}>
-                        Delete Account
+                        konto löchen
                   </button>
                     </>
                   )}

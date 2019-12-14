@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import PostList from "./PostList";
+import PostListSearch from "./PostListSearch";
 import NewPost from "./NewPost";
 import { Button } from "react-bootstrap";
 //import { Link } from "react-router-dom";
@@ -72,7 +73,10 @@ class Posts extends Component {
       );
     });
 
-    return (
+    if (this.props.currentLanguage === "English") {
+
+      return (
+
       <div className="post-container">
         <div className="filterPosts">
           <div className="postLabels">
@@ -120,9 +124,18 @@ class Posts extends Component {
           </select>
         </div>
 
-        <PostList posts={filteredPosts} />
-
-
+    <div className="postsContainer">
+   <div className="postsColumn">
+    <h2>Offers</h2>
+  
+        <PostList posts={filteredPosts} /> 
+        </div>
+  <div className="postsColumn">
+        <h2>Searches</h2>
+    
+        <PostListSearch posts={filteredPosts} /> 
+        </div>
+</div>
         <div className="lonelyLink">
           <Link
             to="addPost"
@@ -139,7 +152,89 @@ class Posts extends Component {
 
         {this.state.addPost && <NewPost refreshData={this.getDataPosts} />}
       </div>
-    );
+    ) }
+
+     // ----------------------------------------LANGUAGE CHANGE---------
+
+    else if (this.props.currentLanguage === "German") {
+    
+      return (
+        <div className="post-container">
+        <div className="filterPosts">
+          <div className="postLabels">
+            <label htmlFor="myposts">Meine Posts</label>
+          </div>
+         
+          <select className="filter"
+            name="owner"
+            id="owner"
+            value={this.state.owner}
+            onChange={this.handleChangeFilter}
+          >
+            <option className="optionBox" value="">
+              --
+            </option>
+            <option className="optionBox" value="owner">
+              My posts
+            </option>
+            <option className="optionBox" value="match">
+              Registered
+            </option>
+          </select>
+            
+          <div className="postLabels">
+            <label htmlFor="category">Nach Kategorien Filtern</label>
+          </div>
+          <select className="filter"
+            name="category"
+            id="category"
+            value={this.state.category}
+            onChange={this.handleChangeFilter}
+          >
+            <option value="">--</option>
+            <option value="language lessons">Spranchunterricht</option>
+            <option value="tutoring">Unterrichten</option>
+            <option value="government appointment">
+              Bestellung
+            </option>
+            <option value="doctor appointment">Arzt Bestellung</option>
+            <option value="meet people">Leute treffen</option>
+            <option value="activities for kids">Für Kinder</option>
+            <option value="activities for seniors">
+              Für Senioren
+            </option>
+          </select>
+        </div>
+
+    <div className="postsContainer">
+   <div className="postsColumn">
+    <h2>Bietet an</h2>
+  
+        <PostList posts={filteredPosts} /> 
+        </div>
+  <div className="postsColumn">
+        <h2>Suchen</h2>
+    
+        <PostListSearch posts={filteredPosts} /> 
+        </div>
+</div>
+        <div className="lonelyLink">
+          <Link
+            to="addPost"
+            spy={true}
+            smooth={true}
+            offset={-1}
+            duration={900}
+            className="addPost"
+            onClick={this.toggleEdit}
+          ><button className="addPostButton">Neue Post</button>
+          
+          </Link>
+        </div>
+
+        {this.state.addPost && <NewPost refreshData={this.getDataPosts} />}
+      </div>
+      ) }
   }
 }
 

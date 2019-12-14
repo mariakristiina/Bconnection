@@ -1,14 +1,13 @@
 .profileInfoContainer {
 display: flex;
 flex: row;
-margin: 2vh 10vw;
+margin: 2vh 5vw;
 justify-content: space-between;
 }
 
 .profileDetails {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .profileDetails div {
@@ -37,11 +36,24 @@ justify-content: space-between;
     text-transform: uppercase;
     color: rgba(0,0,0, .5);
     text-decoration: underline;
+    width: 20vw;
+    text-align: start;
+}
+
+.profLabel2 {
+    font-size: 2vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(0,0,0, .5);
+    text-decoration: underline;
+    width: 10vw;
+    text-align: start;
 }
 
 
 .profText {
     font-size: 2vh;
+    text-align: start;
 }
 
 .age {
@@ -53,8 +65,8 @@ margin-left: 1vw;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* background-color: red;
-    padding: 1vh 2vw; */
+    margin-right: 10vw;
+
 }
 
 .profButton {
@@ -114,5 +126,13 @@ select {
 }
 
 .aboutText {
-    width: 30vw;
+    width: 20vw;
 }
+
+.detailContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 12vw;
+}
+

@@ -83,26 +83,27 @@ option > a:hover {
   color: slategray;
 }
 
-.posts {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  border: 0.5px #e0e0db solid;
-  border-radius: 4px;
-  padding: 1.5em;
-  background-color: #f9f9f4;
-  width: 40vw;
-  height: 50vh;
-  margin: 0.7em;
-}
+
 .postText{
   color: #000;
-  font-size: 3.5vh;
+  font-size: 1vh;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: start;
+  margin: 0;
+  width: 5vw;
+  margin-top: .5vh;
+}
+.postText2{
+  color: #000;
+  font-size: 1vh;
+  margin: 0;
+  width: 5vw;
+  margin-top: .5vh;
 }
 
 .postTitle {
-  font-size: 5vh;
+  font-size: 1.5vh;
 }
 
 .posts:hover {
@@ -113,17 +114,10 @@ option > a:hover {
   opacity: 0.5;
 }
 
-.post-wraper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.singlePosts {
+/* .singlePosts {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .postLinks {
   text-decoration: none;
@@ -133,4 +127,44 @@ option > a:hover {
 .postLinks:hover {
   text-decoration: none;
   color: #000000;
+}
+
+.postsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.postsLists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #f9f9f4;
+  padding: 3vh 3vw;
+  width: 45vw;
+  height: 18vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.posts {
+  border: 0.5px #e0e0db solid;
+  border-radius: 4px;
+  padding: 1vh 1vw;
+  background-color: white;
+  width: 10vw;
+  height: 10vh;
+  margin: 1vw;
+  text-align: start;
+}
+
+.postsColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerForPostItem {
+  display: flex;
+  flex-direction: row;
 }

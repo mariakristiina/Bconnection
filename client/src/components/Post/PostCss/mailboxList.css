@@ -4,6 +4,7 @@
 
 .mailBox:hover{
   background-color: #FCD1D1;
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar

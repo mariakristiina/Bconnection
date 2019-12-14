@@ -15,7 +15,10 @@ const MailboxWrapper = props => {
         <Row classname="row" >
           <Col className="inbox" sm={4} style={{ "maxHeight": "90vh", "overflow": "scroll" }}>
             <div>
-              <Mailbox user={props.user} {...props} />
+              <Mailbox 
+              user={props.user} 
+              post={props.Posts}
+              {...props} />
             </div>
           </Col>
           {props.match.params.messageId && (

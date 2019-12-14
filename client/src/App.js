@@ -281,7 +281,10 @@ class App extends React.Component {
               exact
               path="/posts"
               render={props => (
-                <Posts {...props} setUser={this.setUser} user={this.state.user} />
+                <Posts {...props} setUser={this.setUser} 
+                user={this.state.user} 
+                currentLanguage={this.state.currentLanguage}
+                />
               )}
             />
 
@@ -298,7 +301,10 @@ class App extends React.Component {
             />
             <Route
               path="/mailbox/:user/:messageId?"
-              render={props => <MailboxWrapper user={this.state.user} {...props} />}
+              render={props => <MailboxWrapper 
+              user={this.state.user} 
+              
+              {...props} />}
             />
           </>
           :
