@@ -51,7 +51,11 @@ console.log(msg);
                 <div className="mailBox conversation">
                   <h3 className="messageTitle">{msg.subject.title}</h3>
                   <div className="messageContainer">
-                  {/* <p className="messageText">conversation with {msg.owner.username}</p> */}
+                  {this.props.user._id === msg.subject.owner ?
+                  <p className="messageText">conversation with {msg.owner.username}</p> 
+                  :
+                  <p className="messageText">conversation with {msg.recipient.username}</p> 
+                  }
                 </div>
                 </div>
               </Link>

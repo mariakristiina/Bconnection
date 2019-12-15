@@ -11,9 +11,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 0.5px #e0e0db solid;
+  border: 0px #e0e0db solid;
   padding: 1.5em;
-  background-color: #f9f9f4;
+  background-color:rgba(250,250,250, .5);
   width: 82vw;
   margin: 0.7em;
   outline: none;
@@ -24,6 +24,7 @@
   width: 50%;
   height: 5vh;
   padding: .5vh .5vw;
+  background-color:rgba(250,250,250, .5);
 }
 
 .createPost select {
@@ -54,12 +55,14 @@
   color: #000000;
   margin: 1em 0;
   font-size: 2vh;
+  background-color:rgba(250,250,250, .5);
 }
 
 .createButton:hover{
   border: 2px white solid;
   margin: 1em 0;
   font-size: 2vh;
+  background-color:rgba(0,0,0, .5);
 }
 
 label {
@@ -68,5 +71,5 @@ label {
 
 .createPostLabel {
 text-transform: uppercase;
-font-size: 1.5vh;
+font-size: 1.8vh;
 }

@@ -231,13 +231,15 @@ class PostDetail extends React.Component {
           recipient={this.state.post.owner}
           owner={this.props.user}
           {...this.props}
-        />) : 
+        />) 
+        /* : 
         this.state.owner._id === this.props.user._id ? ( <Message
           subject={this.state.post._id}
           recipient={this.state.post.owner}
           owner={this.props.user}
           {...this.props}
-        />) :
+        />)  */
+        :
         (<div></div> ) }
        
       </div>

@@ -5,7 +5,7 @@
     padding: 1vh 1vw;
     width: 25vw;
     border-radius: 70px;
-    background-color: #f9f9f4;
+    background-color: rgba(250,250,250, .5);
   }
 
   .comments2 {
@@ -14,6 +14,8 @@
     padding: 1vh 1vw;
     width: 25vw;
     border-radius: 70px;
+    background-color: rgba(0,0,0, .5);
+    color: white;
   }
   
   .date{
@@ -54,15 +56,16 @@
     height: 10vh;
     margin-bottom: 2vh;
     border-radius: 70px;
-    border: 1.5px rgba(0, 0, 0, 0.125) solid;
-     background-color: white;
+    border: 0px rgba(0, 0, 0, 0.125) solid;
      padding: 1vh 1vw;
+     background-color: rgba(0,0,0, .5);
+     color: white;
   }
 
   .conversation {
     margin: 2vw;
-    border: 0.5px #e0e0db solid;
-    background-color: #f9f9f4;
+    border: 0px #e0e0db solid;
+    background-color:rgba(0,0,0, .5);
     padding: 2vh 2vw;
   }
 
@@ -76,9 +79,10 @@
 
   .messageText {
     text-decoration: none;
-    color: black;
+    color: white;
     text-transform: uppercase;
     font-size: 1.5vh;
+    
   }
 
   .messageContainer {
@@ -90,10 +94,16 @@
 
   .messageButton {
     width: 10vw;
+    background-color: rgba(0,0,0, .5);
+    border: none;
+    color: white;
   }
 
   .messageButton:hover {
     width: 10vw;
+    background-color: rgba(250,250,250, .5);
+    border: none;
+    color: black;
   }
 
   .sendMessage {
@@ -101,14 +111,16 @@
     flex-direction: column;
     align-items: center;
     margin-left: 31vw;
+    
   }
 
   .containerForSentMessages {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 30vh;
+    height: 60vh;
     margin-top: 4vh;
     margin-bottom: 4vh;
+    
   }
 
   .message1 {

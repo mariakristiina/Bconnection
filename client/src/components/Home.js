@@ -16,7 +16,7 @@ const Home = props => {
             <Carousel.Item>
               <img
                 className="d-block"
-                src="/kidandmomCutt.jpg"
+                src="/Berlin.jpeg"
                 alt="First slide"
               />
               {/*<Carousel.Caption>
@@ -27,25 +27,32 @@ const Home = props => {
             <Carousel.Item>
               <img
                 className="d-block "
-                src="/schoolCut.jpg"
+                src="/hands.jpeg"
                 alt="Third slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block "
-                src="/weAll.jpg"
+                src="/girls.jpeg"
+                alt="Third slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block "
+                src="/cafe2.jpeg"
                 alt="Third slide"
               />
             </Carousel.Item>
           </Carousel>
         </div>
+        
 
         <div className="textContainer">
           <p>
-            We are a non-profit organisation that provides a platform and a
-            space for locals in Berlin and recent refugees to help each other on
-            non-profit basis, share skills and connect.
+            B-connection is a non-profit organisation that provides a platform and a
+            space for locals and recent refugees in Berlin to help each other, share skills and connect.
           </p>
           <Link className="button" to="/signup"
           >Get involved</Link>
@@ -58,29 +65,36 @@ const Home = props => {
       <div>
         <div className="homeContainer">
 
-          <Carousel>
+        <Carousel>
             <Carousel.Item>
               <img
                 className="d-block"
-                src="/kidandmomCutt.jpg"
+                src="/Berlin.jpeg"
                 alt="First slide"
               />
               {/*<Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption>*/}
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>*/}
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block "
-                src="/schoolCut.jpg"
+                src="/hands.jpeg"
                 alt="Third slide"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block "
-                src="/weAll.jpg"
+                src="/girls.jpeg"
+                alt="Third slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block "
+                src="/cafe2.jpeg"
                 alt="Third slide"
               />
             </Carousel.Item>

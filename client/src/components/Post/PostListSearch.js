@@ -2,9 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const PostListSearch = props => {
+
+  const sorted = [...props.posts];
+  sorted.sort((a,b) => {
+let date1 = new Date(a.date), date2 = new Date(b.date);
+return date1 - date2;
+   });
+
   return (
     <div className="postsLists">
-      {props.posts.map(post => {
+      {sorted.map(post => {
         if(post.postType === "search") {
         return (
           <Link className="postLinks" to={`/post/${post._id}`}>
@@ -14,14 +21,6 @@ const PostListSearch = props => {
                 <h6 className="postText">Date: </h6>
                 <h6 className="postText2">{post.date}</h6>
                 </div>
-                {/* <div className="containerForPostItem">
-                <h6 className="postText">Posted by:</h6> 
-                <h6 className="postText2">{post.owner.username}</h6>
-                </div> */}
-                {/* <div className="containerForPostItem">
-                <h6 className="postText">Type: </h6>
-                <h6 className="postText2">{post.postType}</h6>
-                </div> */}
                 <div className="containerForPostItem">
                 <h6 className="postText">Category: </h6>
                 <h6 className="postText2">{post.category}</h6>

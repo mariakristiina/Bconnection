@@ -15,7 +15,8 @@ justify-content: space-between;
 }
 
 .profilePic {
-    margin-bottom: 3vh;
+    margin-top: 5vh;
+    margin-bottom: 4vh;
     border: 1.5px solid rgba(0,0,0, .5);
     height: 25vh;
 }
@@ -34,17 +35,17 @@ justify-content: space-between;
     font-size: 2vh;
     font-weight: 700;
     text-transform: uppercase;
-    color: rgba(0,0,0, .5);
+    color: black;
     text-decoration: underline;
     width: 20vw;
-    text-align: start;
+    text-align: center;
 }
 
 .profLabel2 {
     font-size: 2vh;
     font-weight: 700;
     text-transform: uppercase;
-    color: rgba(0,0,0, .5);
+    color: black;
     text-decoration: underline;
     width: 10vw;
     text-align: start;
@@ -74,14 +75,14 @@ margin-left: 1vw;
     font-size: 1.5vh;
     padding: .8vw 1vw;
     width: 15vw;
-    border: 1.5px rgba(0,0,0, .5) solid;
+    border: 0px rgba(0,0,0, .5) solid;
 }
 
 .profButton:hover {
     font-size: 1.5vh;
     padding: .8vw 1vw;
     width: 15vw;
-    border: .5px white solid;
+    border: .0px white solid;
 }
 
 .profFormInput {
@@ -95,7 +96,7 @@ margin-left: 1vw;
     font-size: 2vh;
     margin-bottom: 1vh;
     background-color: transparent;
-    color: rgba(0,0,0, .5);
+    color: black;
 }
 
 .profForm {
@@ -121,7 +122,7 @@ select {
     padding: .5vh .5vw;
     height: 4.5vh;
     background-color: transparent;
-    color: rgba(0,0,0, .5);
+    color: black;
     font-size: 2vh;
 }
 

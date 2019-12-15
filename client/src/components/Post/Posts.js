@@ -150,7 +150,10 @@ class Posts extends Component {
           </Link>
         </div>
 
-        {this.state.addPost && <NewPost refreshData={this.getDataPosts} />}
+        {this.state.addPost && <NewPost 
+        refreshData={this.getDataPosts} 
+          
+        />}
       </div>
     ) }
 

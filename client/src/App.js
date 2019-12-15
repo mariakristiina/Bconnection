@@ -200,6 +200,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+      <img className="bg" src="/background.jpeg" alt="bg"/>
         <Navbar
           user={this.state.user}
           clearUser={this.setUser}
@@ -296,6 +297,7 @@ class App extends React.Component {
                   {...props}
                   postDetail={this.state.posts}
                   user={this.state.user}
+                  currentLanguage={this.state.currentLanguage}
                 />
               )}
             />
@@ -303,7 +305,7 @@ class App extends React.Component {
               path="/mailbox/:user/:messageId?"
               render={props => <MailboxWrapper 
               user={this.state.user} 
-              
+              currentLanguage={this.state.currentLanguage}
               {...props} />}
             />
           </>

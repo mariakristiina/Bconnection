@@ -52,6 +52,7 @@ class NewPost extends Component {
   };
 
   render() {
+    // if (props.currentLanguage === "English") {
     return (
       <div className="formCreate">
         <form onSubmit={this.handleSubmitNewPost} className="createPost">
@@ -135,7 +136,95 @@ class NewPost extends Component {
         </form>
       </div>
     );
-  }
+  // }
+  // // ----------------------------------------LANGUAGE CHANGE---------
+  // else if (props.currentLanguage === "German") {
+    
+  //   return (
+  //     <div className="formCreate">
+  //       <form onSubmit={this.handleSubmitNewPost} className="createPost">
+  //         <h2 className="createHeading">Create New Post</h2>
+  //         <label className="createPostLabel" htmlFor="title">Post Title </label>
+  //         <input
+  //           type="text"
+  //           name="title"
+  //           id="title"
+  //           onChange={this.handleChangeNewPost}
+  //           value={this.state.title}
+  //         />
+
+  //         <label className="createPostLabel" htmlFor="date">Available date </label>
+  //         <input
+  //           type="date"
+  //           name="date"
+  //           id="date"
+  //           onChange={this.handleChangeNewPost}
+  //           value={this.state.date}
+  //         />
+
+  //         <label className="createPostLabel" htmlFor="startTime">Start Time </label>
+  //         <input
+  //           type="time"
+  //           name="startTime"
+  //           id="startTime"
+  //           onChange={this.handleChangeNewPost}
+  //           value={this.state.startTime}
+  //         />
+
+  //         <label className="createPostLabel" htmlFor="endTime">End Time </label>
+  //         <input
+  //           type="time"
+  //           name="endTime"
+  //           id="endTime"
+  //           onChange={this.handleChangeNewPost}
+  //           value={this.state.endTime}
+  //         />
+
+  //         <label className="createPostLabel" htmlFor="postType"> Post Type: </label>
+  //         <select 
+  //           onChange={this.handleChangeNewPost}
+  //           name="postType"
+  //           id="postType"
+  //         >
+  //           <option value="select">---</option>
+  //           <option value="search">Search</option>
+  //           <option value="offer">Offer</option>
+  //         </select>
+
+  //         <label className="createPostLabel" htmlFor="category"> Category </label>
+  //         <select
+  //           onChange={this.handleChangeNewPost}
+  //           name="category"
+  //           id="category"
+  //         >
+  //           <option value="select">---</option>
+  //           <option value="language lessons">Language Lessons</option>
+  //           <option value="tutoring">Tutoring</option>
+  //           <option value="government appointment">
+  //             Government Appointment
+  //           </option>
+  //           <option value="doctor appointment">Doctor appointment</option>
+  //           <option value="meet people">Meet People</option>
+  //           <option value="activities for kids">Activities for Kids</option>
+  //           <option value="activities for seniors">
+  //             Activities for Seniors
+  //           </option>
+  //         </select>
+
+  //         <label className="createPostLabel" htmlFor="description">Description </label>
+  //         <input className="descriplionBar"
+  //           type="text"
+  //           name="description"
+  //           id="description"
+  //           onChange={this.handleChangeNewPost}
+  //           value={this.state.description}
+  //         />
+  //         <button className="createButton button" type="submit">Create a new Post</button>
+  //       </form>
+  //     </div>
+  //   );
+  // }
+}
 }
 
 export default NewPost;

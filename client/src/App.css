@@ -31,17 +31,19 @@
   color: black;
   text-transform: uppercase;
   text-align: center;
-  border: 3px rgba(0,0,0, .5) solid;
+  border: 0px  rgba(250,250,250, .5) solid;
   padding: 1.5vw 2vw;
   background-color: white;
   width: 20vw;
-  font-size: 3vh;
+  font-size: 2vh;
   outline: none !important;
+  font-weight: 600;
+  background-color: rgba(250,250,250, .5);
 }
 
 .button:hover {
   background-color: rgba(0,0,0, .5);
-  border: 1px white solid;
+  border: 0px white solid;
   color: white;
   padding: 1.5vw 2vw;
   text-transform: uppercase;
@@ -49,5 +51,18 @@
   width: 20vw;
   text-decoration: none;
   font-weight: 600;
-  font-size: 3vh;
+  font-size: 2vh;
 }
+
+.bg {
+opacity: .5;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1; 
+bottom: 0;
+right: 0;
+width: 100%;
+height: auto;
+max-height: 100vh;
+  }

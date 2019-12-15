@@ -288,7 +288,7 @@ const Profile = props => {
                         </div>
       
                         <div>
-                          <button className="button profButton" type="submit">Save Profile</button>
+                          <button className="button profButton" type="submit">Spreichern</button>
                         </div>
                       </form>
       

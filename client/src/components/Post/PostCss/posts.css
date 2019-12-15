@@ -1,25 +1,25 @@
 .addPostButton {
-  background-color: #ffffff;
   margin-top: 2em;
   text-decoration: none;
-  color: black;
+  color: white;
   text-transform: uppercase;
   text-align: center;
-  border: 2px rgba(0,0,0, .5) solid;
+  border: 0px rgba(0,0,0, .5) solid;
   padding: 2vh 2vw;
   width: 15vw;
   font-size: 2.5vh;
   outline: none !important;
+  background-color: rgba(0,0,0, .5);
 }
 
 .addPostButton:hover {
-  background-color: rgba(0,0,0, .5);
+  background-color: rgba(250,250,250, .5);
   margin-top: 2em;
   text-decoration: none;
-  color: white; 
+  color: black; 
   text-transform: uppercase;
   text-align: center;
-  border: 1px white solid;
+  border: 0px white solid;
   padding: 2.1vh 2vw;
   width: 15vw;
   font-size: 2.5vh;
@@ -121,7 +121,7 @@ option > a:hover {
 
 .postLinks {
   text-decoration: none;
-  color: #f19999;
+  color: black
 }
 
 .postLinks:hover {
@@ -140,7 +140,7 @@ option > a:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #f9f9f4;
+  background-color: rgba(0,0,0, .5);
   padding: 3vh 3vw;
   width: 45vw;
   height: 18vw;
@@ -152,7 +152,7 @@ option > a:hover {
   border: 0.5px #e0e0db solid;
   border-radius: 4px;
   padding: 1vh 1vw;
-  background-color: white;
+  background-color:  rgba(250,250,250, .8);
   width: 10vw;
   height: 10vh;
   margin: 1vw;
